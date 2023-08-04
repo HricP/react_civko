@@ -121,7 +121,7 @@ export default function Home() {
     const updateStorage = { ...tempStorage, [e.target.name]: e.target.value };
     setTempStorage(updateStorage);
 
-    let workLoad = tempStorage.meters / tempStorage.hours;
+    let workLoad = updateStorage.meters / updateStorage.hours;
 
     let performance;
     performance = countByGender.female * 0.5 + countByGender.male;
@@ -216,7 +216,7 @@ export default function Home() {
                 name="gender"
                 value="male"
                 onChange={handleChange}
-                checked
+                defaultChecked
               />
               muž
               <Input
